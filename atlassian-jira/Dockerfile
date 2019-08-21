@@ -40,6 +40,7 @@ WORKDIR /var/atlassian/jira
 
 COPY "docker-entrypoint.sh" "/"
 COPY  atlassian-extras-3.2.jar  ${JIRA_INSTALL}/atlassian-jira/WEB-INF/lib/
+COPY  atlassian-universal-plugin-manager-plugin-2.22.4.jar /opt/atlassian/jira/atlassian-jira/WEB-INF/atlassian-bundled-plugins/
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # Run Atlassian JIRA as a foreground process by default.
